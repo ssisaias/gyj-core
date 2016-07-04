@@ -9,8 +9,8 @@ public class HomeController {
 
 	@RequestMapping(value={"/index"})
 	public String index(Model model){
-		model.addAttribute("nome","LETICIA");
-		return "index";
+		//model.addAttribute("nome","LETICIA");
+		return "login";
 	}
 	
 }
