@@ -1,1 +1,1 @@
-# Gy-J Playslists Compartilhadas
+# Gy-J Playlists Compartilhadas
