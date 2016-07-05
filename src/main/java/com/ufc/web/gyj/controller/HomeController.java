@@ -12,5 +12,15 @@ public class HomeController {
 		//model.addAttribute("nome","LETICIA");
 		return "index";
 	}
-
+	
+	@RequestMapping(value={"/login"})
+	public String login(Model model){
+		return "login";
+	}
+	
+	@RequestMapping(value={"/cadastro"})
+	public String cadastro(Model model){
+		return "cadastro";
+	}
+	
 }
