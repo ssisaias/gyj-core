@@ -4,24 +4,26 @@
 <meta charset="UTF-8"/>
 	<meta name="description" content="Gy-J"/>
 	<meta name="keywords" content="Gy-J, gyj"/>
-	<title>Gy-J</title>
+	<title>Gy-J - Entrar</title>
     <link rel="stylesheet" href="/css/pure/pure-min.css"/>
+    <link rel="stylesheet" href="/css/GyjCustom.css"/>
 </head>
 <body>
 
-<form class="pure-form pure-form-stacked" action="/login">
-    <fieldset>
-        <legend>LOGIN</legend>
-
-        <label for="nome">Nome</label>
-        <input id="nome" type="nome" placeholder="Nome" name="email"></input>
-
-        <label for="senha">Senha</label>
-        <input id="senha" type="senha" placeholder="Senha" name="senha"></input>
-
-        <button type="submit" class="pure-button pure-button-primary">Entrar</button>
-    </fieldset>
-</form>
-
+<div class="format-login-cadastro">
+	<form class="pure-form pure-form-stacked" action="/login">
+	    <fieldset>
+	        <legend id="legend-login-cadastro">Entrar no Gyj</legend>
+	
+	        <label for="email">Email</label>
+	        <input id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
+	
+	        <label for="senha">Senha</label>
+	        <input id="senha" type="password" placeholder="Senha" name="senha"></input>
+			<br></br>
+	        <button type="submit" class="button-login-cadastro pure-button pure-button-primary">Entrar</button>
+	    </fieldset>
+	</form>
+</div>
 </body>
 </html>
