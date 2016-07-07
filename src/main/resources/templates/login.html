@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"/>
 	<meta name="description" content="Gy-J"/>
@@ -11,7 +11,7 @@
 <body>
 
 <div class="format-login-cadastro">
-	<form class="pure-form pure-form-stacked" action="/login">
+	<form class="pure-form pure-form-stacked" action="/login" method="post">
 	    <fieldset>
 	        <legend id="legend-login-cadastro">Entrar no Gyj</legend>
 	
@@ -24,6 +24,12 @@
 	        <button type="submit" class="button-login-cadastro pure-button pure-button-primary">Entrar</button>
 	    </fieldset>
 	</form>
+	<div th:if="${param.error}">
+ 				<span class="" >Login ou senha inválidos.</span>
+    </div>
+    <div th:if="${param.logout}">
+ 				<span class="" >Logout efetuado, esperamos lhe ver em breve. </span>
+    </div>
 </div>
 </body>
 </html>

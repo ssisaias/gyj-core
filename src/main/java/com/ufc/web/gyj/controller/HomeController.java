@@ -7,15 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-	@RequestMapping(value={"/index"})
+	@RequestMapping(value={"/index","/"})
 	public String index(Model model){
-		//model.addAttribute("nome","LETICIA");
 		return "index";
-	}
-	
-	@RequestMapping(value={"/login"})
-	public String login(Model model){
-		return "login";
 	}
 	
 	@RequestMapping(value={"/cadastro"})
@@ -23,4 +17,14 @@ public class HomeController {
 		return "cadastro";
 	}
 	
-}
+	@RequestMapping(value={"/home"})
+	public String home(Model model){
+		return "home";
+	}
+	
+	@RequestMapping(value={"/login"})
+	public String login(Model model){
+		return "login";
+	}
+	
+}	
