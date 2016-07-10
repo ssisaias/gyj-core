@@ -65,3 +65,4 @@ $RECYCLE.BIN/
 target/classes/application.properties
 target/classes/META-INF/MANIFEST.MF
 target/classes/META-INF/maven/com.ufc.web.gyj/gyj/pom.properties
+src/main/resources/application.properties
