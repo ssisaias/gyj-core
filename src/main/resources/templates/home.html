@@ -64,7 +64,17 @@
 </div>
 
 <div class="content-wrapper">
-
+	<div class="resultadosBusca">
+		<span th:each="video : ${videosList}">
+		<div>
+			<a th:href="'https://www.youtube.com/watch?v=' + ${video.id}">
+				 <!-- <span th:text="${video.id}">A: </span> -->
+				 <img th:src="${video.thumbnail}">C: </img>
+				 <p th:text="${video.titulo}">B: </p>
+			</a>
+		</div>
+		</span>
+	</div>
     <div class="youtubePlayer">
     
         <iframe id="ytplayer" type="text/html" width="640" height="390"	src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"/>
