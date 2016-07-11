@@ -15,17 +15,19 @@
 	    <fieldset>
 	        <legend id="legend-login-cadastro">Entrar no Gyj</legend>
 	
-	        <label for="email">Email</label>
-	        <input id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
+	        <label for="email">Email:</label>
+	        <input  class="size-input" id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
 	
-	        <label for="senha">Senha</label>
-	        <input id="senha" type="password" placeholder="Senha" name="senha"></input>
+	        <label for="senha">Senha:</label>
+	        <input  class="size-input" id="senha" type="password" placeholder="Senha" name="senha"></input>
 			<br></br>
-	        <button type="submit" class="button-login-cadastro pure-button pure-button-primary">Entrar</button>
+	        <input type="submit" id="entrar" value="Entrar" class="size-input button-login-cadastro pure-button pure-button-primary"></input>
+	    	<br></br>
+	    	<a href="/cadastro">Não possui uma conta? Registre-se agora!</a>
 	    </fieldset>
 	</form>
 	<div th:if="${param.error}">
- 				<span class="" >Login ou senha inválidos.</span>
+ 				<span class="" style="color:red" >Login ou senha inválidos.</span>
     </div>
     <div th:if="${param.logout}">
  				<span class="" >Logout efetuado, esperamos lhe ver em breve. </span>

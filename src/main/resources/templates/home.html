@@ -42,14 +42,6 @@
 </head>
 <body>
 
-
-
-
-
-
-
-
-
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">Gyj</a>
@@ -62,25 +54,46 @@
         </ul>
     </div>
 </div>
-
-<div class="content-wrapper">
-
-    <div class="youtubePlayer">
+	<!-- <div class="youtubePlayer">
     
         <iframe id="ytplayer" type="text/html" width="640" height="390"	src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"/>
 
+    </div> 
+    -->
+    <div class="splash-container" >
+    	<div class="splash">
+    	<form class="pure-form" action="/buscar">
+    		<label>Pesquisa:</label>
+    		<input type="text" class="pure-input-rounded"></input> 
+    		<button type="submit" id="button-search" class="pure-button pure-button-primary pure-button-active"><i class="fa fa-search"></i> Buscar</button>
+		</form>
+    	
+	        <span th:if="${vazio}">
+				<h1 class="content-head is-center">Sem videos, busque acima para adicionar na fila.</h1>
+			</span>
+    	</div>
     </div>
+<div class="content-wrapper">
+	
+	<div class="pure-g resultados">
+		
+		<span th:each="video : ${videosList}">
+			<div class="pure-u-1-3">
+				<a th:href="'https://www.youtube.com/watch?v=' + ${video.id}">
+					 <!-- <span th:text="${video.id}">A: </span> -->
+					 <img th:src="${video.thumbnail}"> </img>
+					 <p th:text="${video.titulo}">B: </p>
+				</a>
+			</div>
+		</span>
+	</div>
+    
 
     <div class="footer l-box is-center">
         2016 - GyJ - Todos os direitos reservados.
     </div>
 
 </div>
-
-
-
-
-
 
 </body>
 </html>
