@@ -55,13 +55,13 @@ public class PlaylistController {
 	}
 	
 	@RequestMapping("/home/addvideo")
-	public String removerUser(HttpServletRequest request){
+	public String removerUser(Model model, HttpServletRequest request){
 		if(request.getParameter("id")!= null){
 			//adiciona o video na playlist
 			String id = request.getParameter("id");
 			System.err.println(id);
 		}
-		
-		return "redirect:/admin/index";
+		model.addAttribute("videoAdicionado", true);
+		return "home";
 	}
 }
