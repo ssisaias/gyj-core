@@ -29,9 +29,9 @@ public class HomeController {
 	
 	@RequestMapping(value={"/home"})
 	public String home(Model model){
-		List<SearchResult> lista = Search.pesquisar("never gonna goza you up");
+		List<SearchResult> lista = null;//Search.pesquisar("never gonna goza you up");
 		if (lista == null || lista.size() == 0) {
-			model.addAttribute("empty","sem resultados");
+			model.addAttribute("vazio",true);
 		}
 		else{
 			List<MyVideo> videos = new ArrayList<MyVideo>(); 
