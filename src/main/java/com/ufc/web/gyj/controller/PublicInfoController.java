@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -14,12 +15,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
+import com.ufc.web.gyj.DAO.AcademiaDAO;
+import com.ufc.web.gyj.model.Academia;
 import com.ufc.web.gyj.model.MyVideo;
 import com.ufc.web.gyj.youtube.Search;
 
+import scala.annotation.meta.setter;
+
 @Controller
 public class PublicInfoController {
-
+	
+	@Autowired
+	AcademiaDAO AcadDao;
+	
 	@RequestMapping(value={"/index","/"})
 	public String index(Model model){
 		SecurityContext context = SecurityContextHolder.getContext();
@@ -27,6 +35,13 @@ public class PublicInfoController {
 			
 		}
 		return "index";
+	}
+	
+	@RequestMapping(value={"/academias"})
+	public String academias(Model model){
+		List<Academia> academias = AcadDao.findAll();
+		model.addAttribute("academias", academias);
+		return "academias";
 	}
 
 	

@@ -15,7 +15,7 @@ import com.ufc.web.gyj.model.Academia;
 public class CadastroAcademiaController {
 	
 	@Autowired
-	AcademiaDAO dao;
+	private AcademiaDAO dao;
 	
 	@RequestMapping(value={"/moderador/cadastroAcademia"},method = RequestMethod.POST)
 	public String cadastrarAcademia(Model model, HttpServletRequest request){

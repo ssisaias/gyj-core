@@ -74,16 +74,26 @@
     	</div>
     </div>
 <div class="content-wrapper">
-	
-	<div class="pure-g resultados">
+	    <div class="content">
+        <h2 class="content-head is-center">Esse é nosso portfolio de clientes,<a href="/cadastro">crie sua conta e junte-se à eles.</a></h2>
 		
-		<span th:each="academia : ${academias}">
-			<div class="pure-u-1-3">
-				 <p th:src="${academia.nome}"> </p>
-				 <p th:src="Localizada em: ${academia.cidade}"> </p>
+		<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+		
+	        <div class="pure-g">
+				
+				<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 academiasportfolio" th:each="academia : ${academias}">
+
+                	<h3 class="content-subhead" th:text="${academia.nome}">
+                	</h3>
+                	<p th:text="'Localizada em: ' + ${academia.cidade}">
+                	</p>
+            	</div>
 			</div>
-		</span>
-	</div>
+            
+           
+        </div>
+    </div>
+	
     
 
     <div class="footer l-box is-center">
