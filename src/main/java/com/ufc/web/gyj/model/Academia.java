@@ -1,9 +1,14 @@
 package com.ufc.web.gyj.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -28,7 +33,10 @@ public class Academia {
 	
 	@Column
 	private String cidade;
-
+	
+	@OneToMany(mappedBy="academia")
+	private List<Playlist> playlists;
+	
 	public long getId() {
 		return id;
 	}

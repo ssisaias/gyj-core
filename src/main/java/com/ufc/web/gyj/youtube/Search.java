@@ -36,7 +36,7 @@ public class Search {
   private static final JsonFactory JSON_FACTORY = new JacksonFactory();
 
   /** Global instance of the max number of videos we want returned (50 = upper limit per page). */
-  private static final long NUMBER_OF_VIDEOS_RETURNED = 25;
+  private static final long NUMBER_OF_VIDEOS_RETURNED = 9;
 
   /** Global instance of Youtube object to make all API requests. */
   private static YouTube youtube;

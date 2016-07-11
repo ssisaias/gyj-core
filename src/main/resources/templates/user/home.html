@@ -50,7 +50,7 @@
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Academias</a></li>
             <li class="pure-menu-item"><a href="/cadastro" class="pure-menu-link">Registrar</a></li>
-             <li class="pure-menu-item"><a href="/login" class="pure-menu-link">Entrar</a></li>
+             <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Sair</a></li>
         </ul>
     </div>
 </div>
@@ -62,9 +62,9 @@
     -->
     <div class="splash-container" >
     	<div class="splash">
-    	<form class="pure-form" action="/buscar">
+    	<form class="pure-form" action="/home">
     		<label>Pesquisa:</label>
-    		<input type="text" class="pure-input-rounded"></input> 
+    		<input type="text" class="pure-input-rounded" name="q"></input> 
     		<button type="submit" id="button-search" class="pure-button pure-button-primary pure-button-active"><i class="fa fa-search"></i> Buscar</button>
 		</form>
     	
