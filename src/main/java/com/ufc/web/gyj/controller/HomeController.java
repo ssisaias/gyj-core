@@ -22,6 +22,11 @@ public class HomeController {
 		return "index";
 	}
 	
+	@RequestMapping(value={"moderador/cadastroAcademia"})
+	public String cadastroAcademia(Model model){
+		return "moderador/cadastroAcademia";
+	}
+	
 	@RequestMapping(value={"/cadastro"})
 	public String cadastro(Model model){
 		return "cadastro";
