@@ -1,8 +1,11 @@
 package com.ufc.web.gyj.controller;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,4 +54,14 @@ public class PlaylistController {
 		return "/user/home";
 	}
 	
+	@RequestMapping("/home/addvideo")
+	public String removerUser(HttpServletRequest request){
+		if(request.getParameter("id")!= null){
+			//adiciona o video na playlist
+			String id = request.getParameter("id");
+			System.err.println(id);
+		}
+		
+		return "redirect:/admin/index";
+	}
 }
