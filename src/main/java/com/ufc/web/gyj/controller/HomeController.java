@@ -32,42 +32,12 @@ public class HomeController {
 		return "cadastro";
 	}
 	
-	@RequestMapping(value={"/home"})
-	public String home(Model model){
-		List<SearchResult> lista = null;//Search.pesquisar("never gonna goza you up");
-		if (lista == null || lista.size() == 0) {
-			model.addAttribute("vazio",true);
-		}
-		else{
-			List<MyVideo> videos = new ArrayList<MyVideo>(); 
-			Iterator<SearchResult> iResults = lista.iterator();
-			while (iResults.hasNext()) {
-
-			      SearchResult singleVideo = iResults.next();
-			      ResourceId rId = singleVideo.getId();
-			      // Double checks the kind is video.
-			      if (rId.getKind().equals("youtube#video")) {
-			        Thumbnail thumbnail = (Thumbnail) singleVideo.getSnippet().getThumbnails().get("default");
-//			        System.out.println(" Video Id" + rId.getVideoId());
-//			        System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
-//			        System.out.println(" Thumbnail: " + thumbnail.getUrl());
-//			        System.out.println("\n-------------------------------------------------------------\n");
-			        MyVideo v = new MyVideo();
-			        v.id = rId.getVideoId();
-			        v.titulo = singleVideo.getSnippet().getTitle();
-			        v.thumbnail = thumbnail.getUrl();
-			        videos.add(v);
-			      }
-			    }
-			model.addAttribute("videosList", videos);
-		}
-		return "home";
-	}
 	
 	@RequestMapping(value={"/login"})
 	public String login(Model model){
 		return "login";
 	}
+	
 	
 	private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
 		
