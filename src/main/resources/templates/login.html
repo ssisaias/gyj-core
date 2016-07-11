@@ -21,7 +21,8 @@
 	        <label for="senha">Senha:</label>
 	        <input  class="size-input" id="senha" type="password" placeholder="Senha" name="senha"></input>
 			<br></br>
-	        <button type="submit" class="size-input button-login-cadastro pure-button pure-button-primary">Entrar</button>
+	        <input type="submit" id="entrar" value="Entrar" class="size-input button-login-cadastro pure-button pure-button-primary"></input>
+	    	<a href="/cadastro">Não possui uma conta? Registre-se agora!</a>
 	    </fieldset>
 	</form>
 	<div th:if="${param.error}">
