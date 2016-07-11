@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<meta name="description" content="Sua tela inicial."></meta>
+
+    <title>Gyj - Reprodutor Compartilhado</title>
+
+    
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"></link>
+
+
+
+<!--[if lte IE 8]>
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"></link>
+  
+<!--<![endif]-->
+
+
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></link>
+
+
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css"></link>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/marketing.css"></link>
+    <!--<![endif]-->
+  
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Gyj</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Academias</a></li>
+            <li class="pure-menu-item"><a href="/cadastro" class="pure-menu-link">Registrar</a></li>
+             <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Sair</a></li>
+        </ul>
+    </div>
+</div>
+	<!-- <div class="youtubePlayer">
+    
+        <iframe id="ytplayer" type="text/html" width="640" height="390"	src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"/>
+
+    </div> 
+    -->
+    <div class="splash-container" >
+    	<div class="splash">
+    	<form class="pure-form" action="/home">
+    		<label>Pesquisa:</label>
+    		<input type="text" class="pure-input-rounded" name="q"></input> 
+    		<button type="submit" id="button-search" class="pure-button pure-button-primary pure-button-active"><i class="fa fa-search"></i> Buscar</button>
+		</form>
+    	
+	        <span th:if="${vazio}">
+				<h1 class="content-head is-center">Sem videos, busque acima para adicionar na fila.</h1>
+			</span>
+    	</div>
+    </div>
+<div class="content-wrapper">
+	
+	<div class="pure-g resultados">
+		
+		<span th:each="academia : ${academias}">
+			<div class="pure-u-1-3">
+				 <p th:src="${academia.nome}"> </p>
+				 <p th:src="Localizada em: ${academia.cidade}"> </p>
+			</div>
+		</span>
+	</div>
+    
+
+    <div class="footer l-box is-center">
+        2016 - GyJ - Todos os direitos reservados.
+    </div>
+
+</div>
+
+</body>
+</html>

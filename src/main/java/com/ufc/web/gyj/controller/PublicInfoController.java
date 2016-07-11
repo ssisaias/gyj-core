@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +18,17 @@ import com.ufc.web.gyj.model.MyVideo;
 import com.ufc.web.gyj.youtube.Search;
 
 @Controller
-public class HomeController {
+public class PublicInfoController {
 
 	@RequestMapping(value={"/index","/"})
 	public String index(Model model){
+		SecurityContext context = SecurityContextHolder.getContext();
+		if (context.getAuthentication().getName().equals("anonymousUser")) { //Usuario nao autenticado 
+			
+		}
 		return "index";
 	}
+
 	
 	@RequestMapping(value={"moderador/cadastroAcademia"})
 	public String cadastroAcademia(Model model){

@@ -32,6 +32,6 @@ public class CadastroAcademiaController {
 		academia.setTelefone(telefone);
 		dao.save(academia);
 		
-		return "home";
+		return "/user/home";
 	}
 }
