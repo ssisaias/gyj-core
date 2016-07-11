@@ -36,5 +36,10 @@
 	    </fieldset>
 	</form>
 </div>
+<span th:if="${erro}">
+	<script th:inline="javascript">
+		alert('Falha ao cadastrar. Por favor tente novamente.');
+	</script>
+</span>
 </body>
 </html>

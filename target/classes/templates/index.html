@@ -44,7 +44,11 @@
         </ul>
     </div>
 </div>
-
+<span th:if="${sucesso}">
+	<script th:inline="javascript">
+		alert('Cadastro realizado com sucesso!');
+	</script>
+</span>
 <div class="splash-container">
     <div class="splash">
         <h1 class="splash-head">Gy-J</h1>
