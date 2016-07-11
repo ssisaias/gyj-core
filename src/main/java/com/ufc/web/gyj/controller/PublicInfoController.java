@@ -20,7 +20,6 @@ import com.ufc.web.gyj.model.Academia;
 import com.ufc.web.gyj.model.MyVideo;
 import com.ufc.web.gyj.youtube.Search;
 
-import scala.annotation.meta.setter;
 
 @Controller
 public class PublicInfoController {
