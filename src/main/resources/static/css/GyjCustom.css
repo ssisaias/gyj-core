@@ -2,7 +2,7 @@
 .format-login-cadastro{
 	margin-left: auto;
 	margin-right: auto;
-	width: 25%;
+	width: 30%;
 	height: 25%;
 	background-color: #1f8dd6;
 	padding: 10px;
@@ -16,4 +16,13 @@
 }
 .button-login-cadastro{
 	background-color: #2d3e50;
+	height:25%;
+}
+.size-input{
+	width: 100%;
+	box-sizing : border-box;
+}
+
+label{
+	color:white;
 }
