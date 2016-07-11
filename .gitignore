@@ -63,3 +63,4 @@ $RECYCLE.BIN/
 *.lnk
 /target/
 target/classes/application.properties
+src/main/resources/application.properties
