@@ -8,7 +8,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.ufc.web.gyj.DAO.AcademiaDAO;
 import com.ufc.web.gyj.DAO.UserDAO;
+import com.ufc.web.gyj.model.Academia;
 import com.ufc.web.gyj.model.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,7 +24,8 @@ public class GyjApplicationTests {
 	
 	//@Autowired
 	//private UserDAO userDAO;
-	
+//	@Autowired
+//	private AcademiaDAO aDao;
 	
 //	public void testarAdicionarUsuarioDaoHibernate(){
 //		User user = new User();
@@ -33,5 +36,10 @@ public class GyjApplicationTests {
 //		user.setSenha("123");
 //		user = userDAO.save(user);
 //		Assert.assertNotNull(user);
+//	}
+	
+//	public void testarAdicionarAcademiaUsandoJPA(){
+//		Academia gym = new Academia();
+//		Assert.assertNotNull(gym);
 //	}
 }
