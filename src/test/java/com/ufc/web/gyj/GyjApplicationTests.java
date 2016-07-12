@@ -1,5 +1,6 @@
 package com.ufc.web.gyj;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +20,18 @@ public class GyjApplicationTests {
 	public void contextLoads() {
 	}
 	
-	@Autowired
-	private UserDAO userDAO;
+	//@Autowired
+	//private UserDAO userDAO;
 	
 	
-	public void testarAdicionarUsuarioDaoHibernate(){
+//	public void testarAdicionarUsuarioDaoHibernate(){
 //		User user = new User();
 //		user.setAtivo(true);
-//		user.setNome("Boribuilder");
-//		user.setSenha("12345");
-//		userDAO.save(user);
-	}
+//		user.setNome("admin");
+//		user.setEmail("admin@gyj.com");
+//		user.setRole("ADMIN");
+//		user.setSenha("123");
+//		user = userDAO.save(user);
+//		Assert.assertNotNull(user);
+//	}
 }
