@@ -15,6 +15,8 @@ import javax.persistence.Table;
 @Table(name="User")
 public class User {
 	
+	
+
 	@Id
 	@GeneratedValue
 	private long id;
@@ -87,5 +89,19 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	public List<Academia> getAcademias() {
+		return academias;
+	}
+
+	public void setAcademias(List<Academia> academias) {
+		this.academias = academias;
+	}
+
+	public Academia getAcademia() {
+		return academia;
+	}
+
+	public void setAcademia(Academia academia) {
+		this.academia = academia;
+	}
 }

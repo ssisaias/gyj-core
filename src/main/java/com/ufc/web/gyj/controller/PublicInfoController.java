@@ -36,7 +36,7 @@ public class PublicInfoController {
 		return "index";
 	}
 	
-	@RequestMapping(value={"/teste","/"})
+	@RequestMapping(value={"/teste"})
 	public String teste(Model model){
 	
 		return "teste";
