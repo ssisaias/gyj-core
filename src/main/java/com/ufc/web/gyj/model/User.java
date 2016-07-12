@@ -1,9 +1,13 @@
 package com.ufc.web.gyj.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -29,6 +33,12 @@ public class User {
 	
 	@Column
 	private String role = "USER"; //funcao do usuario
+	
+	@OneToMany(mappedBy="moderador")
+	private List<Academia> academias; //academias que ele é MOD
+	
+	@ManyToOne
+	private Academia academia;//Academias que ele malha
 	
 	public String getRole() {
 		return role;

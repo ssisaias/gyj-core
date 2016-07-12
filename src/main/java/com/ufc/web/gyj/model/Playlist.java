@@ -1,10 +1,14 @@
 package com.ufc.web.gyj.model;
 
+import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -16,12 +20,37 @@ public class Playlist {
 	@GeneratedValue
 	private long id;
 	
+	@Column 
+	private String nome;
+	
 	@Column
-	private String link;
+	private Date dataCriacao;
+	
+	@Column
+	private Date ultimaAlteracao;
 	
 	@NotNull
 	@ManyToOne
 	private Academia academia;
+	
+	@OneToMany(mappedBy="playlist")
+	private List<Musica> musicas;
+	
+	public Academia getAcademia() {
+		return academia;
+	}
+
+	public void setAcademia(Academia academia) {
+		this.academia = academia;
+	}
+
+	public List<Musica> getMusicas() {
+		return musicas;
+	}
+
+	public void setMusicas(List<Musica> musicas) {
+		this.musicas = musicas;
+	}
 
 	public long getId() {
 		return id;
@@ -31,11 +60,4 @@ public class Playlist {
 		this.id = id;
 	}
 
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
 }
