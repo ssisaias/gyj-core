@@ -10,11 +10,12 @@ window.onload = function(){
 	cadastrarUser.addEventListener('click',campoVazioUser,false);
 	
 	function campoVazioUser(event){
-		if(nomeUser.value.length == 0 || emailUser.value.length == 0 || senha.value.length == 0 || conf.value.length == 0){
+/*		if(nomeUser.value.length == 0 || emailUser.value.length == 0 || senha.value.length == 0 || conf.value.length == 0){
 			event.preventDefault();
 			spanCampo.style.color = "red";
 			spanCampo.innerHTML = "Campos obrigatórios em branco, por favor preencher.";
 		}
+*/
 		if(senha.value != conf.value){
 			event.preventDefault();
 			spanSenha.style.color = "red";

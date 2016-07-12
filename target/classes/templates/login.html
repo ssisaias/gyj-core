@@ -58,10 +58,10 @@
 				        <legend id="legend-login-cadastro">Entrar no Gyj</legend>
 				
 				        <label for="email">Email:</label>
-				        <input  class="size-input" id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
+				        <input  class="size-input" id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email" required="required"></input>
 				
 				        <label for="senha">Senha:</label>
-				        <input  class="size-input" id="senha" type="password" placeholder="Senha" name="senha"></input>
+				        <input  class="size-input" id="senha" type="password" placeholder="Senha" name="senha" required="required"></input>
 						
 						<div th:if="${param.error}">
  							<span class="" style="color:red" >Login ou senha inválidos.</span>

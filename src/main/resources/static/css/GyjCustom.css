@@ -37,7 +37,9 @@ label{
 	margin: 10px;
 }
 .videobox{
-	margin: 1px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
 }
 .absolute-center-div{
     margin: auto;
