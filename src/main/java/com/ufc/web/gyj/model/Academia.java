@@ -93,4 +93,29 @@ public class Academia {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+
+	public List<Playlist> getPlaylists() {
+		return playlists;
+	}
+
+	public void setPlaylists(List<Playlist> playlists) {
+		this.playlists = playlists;
+	}
+
+	public User getModerador() {
+		return moderador;
+	}
+
+	public void setModerador(User moderador) {
+		this.moderador = moderador;
+	}
+
+	public List<User> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(List<User> usuarios) {
+		this.usuarios = usuarios;
+	}
+	
 }

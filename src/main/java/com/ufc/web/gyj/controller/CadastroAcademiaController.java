@@ -19,6 +19,7 @@ public class CadastroAcademiaController {
 	
 	@RequestMapping(value={"/moderador/cadastroAcademia"},method = RequestMethod.POST)
 	public String cadastrarAcademia(Model model, HttpServletRequest request){
+		//Precisa corrigir aqui para associar academia ao moderador!!!
 		String nome = request.getParameter("nomeAcademia");
 		String endereco = request.getParameter("enderecoAcademia");
 		String cidade = request.getParameter("cidadeAcademia");

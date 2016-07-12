@@ -36,6 +36,12 @@ public class PublicInfoController {
 		return "index";
 	}
 	
+	@RequestMapping(value={"/teste"})
+	public String teste(Model model){
+	
+		return "teste";
+	}
+	
 	@RequestMapping(value={"/academias"})
 	public String academias(Model model){
 		List<Academia> academias = AcadDao.findAll();

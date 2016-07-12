@@ -11,6 +11,7 @@ window.onload = function(){
 	function campoVazioAcademia(event){
 		if(nomeAcademia.value.length == 0 || enderecoAcademia.value.length == 0 || cidadeAcademia.value.length == 0){
 			event.preventDefault();
+			spanAcademia.style.color = "red";
 			spanAcademia.innerHTML = "Campos obrigatórios em branco, por favor preencher.";
 		}
 	}
