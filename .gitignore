@@ -61,5 +61,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#Custom
 /target/**
 src/main/resources/application.properties
+.settings
