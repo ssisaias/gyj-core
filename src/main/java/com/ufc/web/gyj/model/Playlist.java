@@ -24,6 +24,9 @@ public class Playlist {
 	private String nome;
 	
 	@Column
+	private boolean ativa;
+	
+	@Column
 	private Date dataCriacao;
 	
 	@Column
