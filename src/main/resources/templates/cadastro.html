@@ -1,45 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8"/>
+    <meta charset="utf-8"></meta>
 	<meta name="description" content="Gy-J"/>
 	<meta name="keywords" content="Gy-J, gyj"/>
-	<title>Gy-J - Cadastro</title>
-    <link rel="stylesheet" href="/css/pure/pure-min.css"/>
-    <link rel="stylesheet" href="/css/GyjCustom.css"/>
-    <script type="text/javascript" src="js/cadastro.js"></script> 
+	<link rel="stylesheet" href="/css/pure/pure-min.css"/>
+	<link rel="stylesheet" href="/css/GyjCustom.css"/> 
+    <script type="text/javascript" src="js/cadastro.js"></script>
+    <title>Gyj - Cadastro</title>
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"></link>
+
+	<!--[if lte IE 8]>
+	  
+	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+	  
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	  
+	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"></link>
+	  
+	<!--<![endif]-->
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></link>
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css"></link>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/marketing.css"></link>
+    <!--<![endif]-->
+  
 </head>
 <body>
 
-<div class="format-login-cadastro">
-	<form class="pure-form pure-form-stacked" action="">
-	    <fieldset>
-	        <legend id="legend-login-cadastro">Cadastro</legend>
-	
-	        <label for="nome">Nome*:</label>
-	        <input class="size-input" id="nome" type="text" placeholder="Nome" name="nome"></input>
-	        
-	        <label for="email">Email*:</label>
-	        <input class="size-input" id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
-	
-	        <label for="senha">Senha*:</label>
-	        <input class="size-input" id="senha" type="password" placeholder="Senha" name="senha"></input>
-	        
-	        <label for="conf-senha">Confirmar senha*:</label>
-	        <input class="size-input" id="conf-senha" type="password" placeholder="Confirmar Senha" name="conf-senha"></input>
-	        <br></br>
-	        <span id="campos">(*)Campos obrigatórios</span>
-	        <br></br>
-	        <span id="confirmarSenha"></span>
-			<br></br>
-	        <input type="submit" id="cadastrar" value="Cadastrar" class="size-input button-login-cadastro button-login pure-button pure-button-primary"></input>
-	    </fieldset>
-	</form>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Gyj</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="/index" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="/academias" class="pure-menu-link">Academias</a></li>
+            <li class="pure-menu-item"><a href="/cadastro" class="pure-menu-link">Registrar</a></li>
+             <li class="pure-menu-item"><a href="/login" class="pure-menu-link">Entrar</a></li>
+        </ul>
+    </div>
 </div>
-<span th:if="${erro}">
-	<script th:inline="javascript">
-		alert('Falha ao cadastrar. Por favor tente novamente.');
-	</script>
-</span>
+ 	
+ 	<br></br>
+	<div class="content">
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5 absolute-center-div">
+				<form class="pure-form pure-form-stacked" action="/cadastro" method="post">
+	    			<fieldset>
+				        <legend id="legend-login-cadastro">Cadastro</legend>
+				
+				        <label for="nome">Nome*:</label>
+				        <input class="size-input" id="nome" type="text" placeholder="Nome" name="nome"></input>
+				        
+				        <label for="email">Email*:</label>
+				        <input class="size-input" id="email" type="email" placeholder="Ex: gyj@gmail.com" name="email"></input>
+				
+				        <label for="senha">Senha*:</label>
+				        <input class="size-input" id="senha" type="password" placeholder="Senha" name="senha"></input>
+				        
+				        <label for="conf-senha">Confirmar senha*:</label>
+				        <input class="size-input" id="conf-senha" type="password" placeholder="Confirmar Senha" name="conf-senha"></input>
+				    
+				        <span id="errorCampos">(*)Campos obrigatórios</span>
+				        <br></br>
+				        <span id="errorSenha"></span>
+						<br></br>
+				        <input type="submit" id="cadastrar" value="Cadastrar" class="button-login-cadastro"></input>
+				    </fieldset>
+				</form>
+			</div>
+    	</div>    
+    	<br></br>
+    </div>
+	<span th:if="${erro}">
+		<script th:inline="javascript">
+			alert('Falha ao cadastrar. Por favor tente novamente.');
+		</script>
+	</span>
+	<div class="footer l-box is-center">
+        2016 - GyJ - Todos os direitos reservados.
+   	</div>
 </body>
 </html>
