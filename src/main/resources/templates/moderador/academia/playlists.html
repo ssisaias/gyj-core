@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+	<meta name="description" content="Gy-J"/>
+	<meta name="keywords" content="Gy-J, gyj"/>
+	<title>Gy-J - Playlists</title>
+    <link rel="stylesheet" href="/css/pure/pure-min.css"/>
+    <link rel="stylesheet" href="/css/GyjCustom.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></link>
+    <script type="text/javascript" src=""></script> 
+</head>
+<body>
+	Playlists da academia:
+	<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 academiasportfolio" th:each="playlist : ${playlists}">
+          <h3 class="content-subhead" th:text="${playlist.nome}">
+          <p>XX Musicas</p>
+    </div>
+    <!-- Botoes -->
+	<button class="pure-button">
+	    <i class="fa fa-plus"></i>
+	    Nova
+	</button>
+</body>
+</html>
