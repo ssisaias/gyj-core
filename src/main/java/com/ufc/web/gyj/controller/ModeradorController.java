@@ -1,10 +1,13 @@
 package com.ufc.web.gyj.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ufc.web.gyj.DAO.AcademiaDAO;
@@ -28,11 +31,21 @@ public class ModeradorController {
 		return "moderador/academias";
 	}
 	
+	@RequestMapping(value={"moderador/profile"})
+	public String myAcademias(Model model){
+		return "moderador/profile";
+	}
+	
 	@RequestMapping(value={"moderador/academia/{id}"})
 	public String academia(Model model, @PathVariable("id") int id){
 		//pegar academias do moderador ou admin
 		Academia gym = aDao.getOne((long) id);
 		model.addAttribute("playlists", gym.getPlaylists());
 		return "moderador/academia/playlists";
+	}
+	
+	@RequestMapping(value={"/moderador/cadastroAcademia"},method = RequestMethod.GET)
+	public String cadastrarAcademia(Model model, HttpServletRequest request){
+		return "/moderador/cadastroAcademia";
 	}
 }
