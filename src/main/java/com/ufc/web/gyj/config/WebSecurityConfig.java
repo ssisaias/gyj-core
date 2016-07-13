@@ -13,6 +13,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	DataSource dataSource;
+	@Autowired
+	CustomAuthenticationSuccessHandler handler;
 	//configuração de login 
 	//verifica os dados contidos no banco
 	@Autowired
@@ -43,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
          //.anyRequest().authenticated()
          .and()
      .formLogin()
-         .loginPage("/login").failureUrl("/login?error").successHandler(new CustomAuthenticationSuccessHandler())
+         .loginPage("/login").failureUrl("/login?error").successHandler(handler)
          .usernameParameter("email").passwordParameter("senha")
          .permitAll()
          .and()
