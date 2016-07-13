@@ -71,7 +71,6 @@
 	      <artifactId>google-http-client-jackson2</artifactId>
 	      <version>1.22.0</version>
 	    </dependency>
-	    
 	</dependencies>
 	
 	<build>
