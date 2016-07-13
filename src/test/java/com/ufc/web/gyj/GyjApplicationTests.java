@@ -13,6 +13,7 @@ import com.ufc.web.gyj.DAO.UserDAO;
 import com.ufc.web.gyj.model.Academia;
 import com.ufc.web.gyj.model.User;
 
+@SuppressWarnings("unused")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = GyjApplication.class)
 @WebAppConfiguration

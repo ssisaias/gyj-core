@@ -1,11 +1,9 @@
 package com.ufc.web.gyj.controller;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -17,8 +15,6 @@ import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
 import com.ufc.web.gyj.DAO.AcademiaDAO;
 import com.ufc.web.gyj.model.Academia;
-import com.ufc.web.gyj.model.MyVideo;
-import com.ufc.web.gyj.youtube.Search;
 
 
 @Controller
