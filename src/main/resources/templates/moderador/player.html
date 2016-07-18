@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout/layoutBase">
+
 <head>
-<meta charset="UTF-8"/>
-	<meta name="description" content="Gy-J"/>
-	<meta name="keywords" content="Gy-J, gyj"/>
-	<title>Gy-J - Cadastro de Academia</title>
-    <link rel="stylesheet" href="/css/pure/pure-min.css"/>
-    <link rel="stylesheet" href="/css/GyjCustom.css"/>
-    <script type="text/javascript" src="/js/cadastroAcademia.js"></script> 
+	<title>Gyj - Reprodutor Compartilhado</title>
 </head>
-<body>
+
+<section layout:fragment="content">
+    
 	<!-- Aqui sera usado ajax posteriormente -->
 	
 	<div class="fila">
@@ -18,5 +18,5 @@
 	<div class="player">
 		
 	</div>
-</body>
+</section>
 </html>

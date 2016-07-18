@@ -1,46 +1,14 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout/layoutBase">
+
 <head>
-<meta charset="utf-8"></meta>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-<meta name="description" content="Sua tela inicial."></meta>
-<link rel="stylesheet" href="/css/GyjCustom.css"/> 
-    <title>Gyj - Reprodutor Compartilhado</title>
-
-    
-
-
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"></link>
-
-
-
-<!--[if lte IE 8]>
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  
-<![endif]-->
-<!--[if gt IE 8]><!-->
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"></link>
-  
-<!--<![endif]-->
-
-
-
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></link>
-
-
-
-  
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css"></link>
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/marketing.css"></link>
-    <!--<![endif]-->
-  
+	<title>Gyj - Reprodutor Compartilhado</title>
 </head>
-<body>
+
+<section layout:fragment="content">
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -68,9 +36,5 @@
 		</div>
 	</div>
 </div>
-<div class="footer l-box is-center">
-        2016 - GyJ - Todos os direitos reservados.
-</div>
-
-</body>
+</section>
 </html>

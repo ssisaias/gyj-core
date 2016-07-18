@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout/layoutBase">
+
 <head>
-<meta charset="UTF-8"/>
-	<meta name="description" content="Gy-J"/>
-	<meta name="keywords" content="Gy-J, gyj"/>
-	<title>Gy-J - Suas academias</title>
-    <link rel="stylesheet" href="/css/pure/pure-min.css"/>
-    <link rel="stylesheet" href="/css/GyjCustom.css"/>
-    <script type="text/javascript" src=""></script> 
+	<title>Gyj - Reprodutor Compartilhado</title>
 </head>
-<body>
+
+<section layout:fragment="content">
+    
 	Suas academias:
 	<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 academiasportfolio" th:each="academia : ${academias}">
           <a th:href="'/moderador/academia/' + ${academia.id}">
@@ -17,5 +17,5 @@
           </a>
     </div>
 	
-</body>
+</section>
 </html>
